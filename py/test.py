@@ -1,0 +1,4 @@
+import chardet,struct
+t=struct.pack('<H',int(188)%0xFFFF)
+s=b"\x01\x02"+t+b"\x09"+b"\x00"*15
+f.write(s)

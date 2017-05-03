@@ -1,0 +1,14 @@
+import socket
+
+s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+s.bind(('127.0.0.1',9999))
+
+data1,addr1=s.recvfrom(1024)
+print(data1)
+data2,addr2=s.recvfrom(1024)
+print(data2)
+
+if data1==data2:
+	print('True')
+else:
+	print('False')
